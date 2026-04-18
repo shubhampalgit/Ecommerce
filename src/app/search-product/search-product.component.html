@@ -1,0 +1,20 @@
+<h3>Search Form</h3>
+
+<input [(ngModel)]="searchText" placeholder="Enter product name">
+<button (click)="search()">Search</button>
+
+<h4>Product List</h4>
+
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+  </tr>
+
+  <tr *ngFor="let p of filteredProducts">
+    <td>{{p.pid}}</td>
+    <td>{{p.pname}}</td>
+    <td>{{p.price}}</td>
+  </tr>
+</table>
